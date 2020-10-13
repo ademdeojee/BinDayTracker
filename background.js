@@ -1,5 +1,6 @@
 chrome.runtime.onInstalled.addListener(function () {
-    chrome.storage.sync.set({ 'nextFriday': nextFriday }, function () { });
+    chrome.storage.sync.set({ 'nFriday': nextFriday() }, function () { });
+    chomee.storage.sync.get()
 });
 
 function nextFriday() {
