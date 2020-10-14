@@ -9,7 +9,7 @@ function checkValue() {
     var checkBox = document.querySelector("#check");
     var text = document.querySelector(".bin-info");
 
-    chrome.storage.sync.set({ 'checkState': checkBox.checked }, function () { });
+    chrome.storage.sync.set({ 'checkState': checkBox.checked });
 
     if (checkBox.checked == true) {
         text.innerHTML = "Green";
@@ -27,4 +27,11 @@ function restoreOptions() {
         document.querySelector("#check").checked = items.checkState;
         checkValue();
     });
+}
+
+function getNextDayOfWeek(dayOfWeek) {
+    //returns today if today is day of week
+    var d = new Date();
+    d.setDate(d.getDate() + ((7-d.getDay())%7+dayOfWeek) % 7);
+    return d;
 }
