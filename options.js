@@ -2,7 +2,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     restoreOptions();
     var link = document.querySelector("#check");
-    link.addEventListener('click', checkValue);
+    link.addEventListener('click', function(){
+        var checkBox = document.querySelector("#check");
+        chrome.storage.sync.set({ 'checkState': checkBox.checked });
+    });
     var link = document.querySelector("#days");
     link.onchange = function (){
         chrome.storage.sync.set({'nextDay' : link.value});
@@ -10,10 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 });
 
-function checkValue(){
-    var checkBox = document.querySelector("#check");
-    chrome.storage.sync.set({ 'checkState': checkBox.checked });
-}
+
 
 function restoreOptions() {
     chrome.storage.sync.get('nextDay', function (items) {
