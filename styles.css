@@ -1,82 +1,67 @@
-
-
 h1 {
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 24px;
-    color: black;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  color: black;
 }
 
 h2 {
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    font-size: 36px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 36px;
 }
 
 body {
-    width: 250px;
-    height: 250px;
-    background-color: white;
+  background-color: white;
 }
 
-.container{
-    display: flex;
-	justify-content: center;
-	align-items: center;
+.container {
+  width: 250;
+  height: 250;
 }
 
 .bin-info {
-	text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    font-size: 36px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 36px;
 }
 
 .date {
-	text-align: left;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: normal;
+  text-align: left;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: normal;
 }
 
-input[type=checkbox]{
-	height: 0;
-	width: 0;
-	visibility: hidden;
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: #fbc02d;
+  border-radius: 20px;
+  transition: all 0.3s;
 }
 
-label {
-	cursor: pointer;
-	text-indent: -9999px;
-	width: 100px;
-	height: 50px;
-	background: #fbc02d;
-	display: block;
-	border-radius: 50px;
-	position: relative;
+.switch::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: white;
+  top: 1px;
+  left: 1px;
+  transition: all 0.3s;
 }
 
-label:after {
-	content: '';
-	position: absolute;
-	top: 2.5px;
-	left: 2.5px;
-	width: 45px;
-	height: 45px;
-	background: #fff;
-	border-radius: 45px;
-	transition: 0.3s;
+.checkbox:checked + .switch::after {
+  left: 20px;
 }
-
-input:checked + label {
-	background: #388e3c;
+.checkbox:checked + .switch {
+  background-color: #388e3c;
 }
-
-input:checked + label:after {
-	left: calc(100% - 2.5px);
-	transform: translateX(-100%);
-}
-
-label:active:after {
-	width: 65px;
+.checkbox {
+  display: none;
 }
