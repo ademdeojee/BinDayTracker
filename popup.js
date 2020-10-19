@@ -20,11 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector("#date").innerHTML = "The Next Bin Day: " + getNextDayOfWeek(items.nextDay).toLocaleString('en-au', { day: 'numeric', month: 'numeric' }) + " (" + getNextDayOfWeek(items.nextDay).toLocaleString('en-au', { weekday: 'short' }) + ")";
         }
     });
-    var link = document.querySelector("#settings");
-    link.addEventListener('click', function() {
-        var win = window.open("chrome-extension://glipffkfpoiblabcalcgeainmbpjhkfo/options.html", '_blank');
-        win.focus();
-    });
 });
 
 function getNextDayOfWeek(dayOfWeek) {
