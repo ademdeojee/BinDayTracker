@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var text = document.querySelector(".bin-info");
+    var text = document.querySelector("#bin-info");
     chrome.storage.sync.get('checkState', function (items) {
         if (items.checkState) {
             text.innerHTML = "Green";
@@ -10,7 +10,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
     chrome.storage.sync.get('nextDay', function (items) {
-        document.querySelector(".date").innerHTML = "The next " + getNextDayOfWeek(items.nextDay).toLocaleString('en-us', {  weekday: 'long' }) + " is " + getNextDayOfWeek(items.nextDay).toLocaleString('en-us', {  month: 'long', day :'numeric'});
+        var now = new Date();
+        if(getNextDayOfWeek(items.nextDay).getDate()-7 == now.getDate()){
+            document.querySelector("#date").innerHTML = "Today Is Bin Day (" + now.toLocaleString('en-au', { weekday: 'short', day: 'numeric', month: 'numeric' }) + ")";
+        }else{
+            document.querySelector("#date").innerHTML = "The Next Bin Day: " + getNextDayOfWeek(items.nextDay).toLocaleString('en-au', { day: 'numeric', month: 'numeric' }) + " (" + getNextDayOfWeek(items.nextDay).toLocaleString('en-au', { weekday: 'short' }) + ")"; 
+        }
     });
 });
 

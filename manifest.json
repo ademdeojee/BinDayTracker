@@ -12,5 +12,6 @@
     "default_title": "Bin Day",
     "default_popup": "popup.html"
   },
+  "icons": {"128": "logo.png" },
   "options_page": "options.html"
 }
