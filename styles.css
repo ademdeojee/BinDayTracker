@@ -1,82 +1,87 @@
 h1 {
-  text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 24px;
-  font-weight: normal;
-  color: black;
-  margin: 0;
+    text-align: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    color: black;
+    margin: 0;
 }
 
 h2 {
-  text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: bold;
-  font-size: 36px;
-  margin: 0;
+    text-align: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    margin: 0;
 }
 
 h3 {
-  text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
+    text-align: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
 }
 
 body {
-  background-color: white;
+    background-color: white;
 }
 
-.options-head{
-  font-size: 36px;
-  text-align: left;
-  margin: 10px;
-  margin-left: 0;
+.options {
+    background-color: #292A2D;
 }
 
-.label{
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  margin: 15px;
-  margin-left: 0;
-  
+.label {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: white;
+    margin: 15px;
+    margin-left: 60px;
 }
 
 .container {
-  width: 225;
-  height: 200;
+    width: 225;
+    height: 200;
+}
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .switch {
-  position: absolute;
-  display: inline-block;
-  width: 50px;
-  height: 25px;
-  background-color: #fbc02d;
-  border-radius: 25px;
-  transition: all 0.4s;
-  margin-left: 60px;
-  margin-top: 0px;
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    background-color: #ffc622;
+    border-radius: 25px;
+    transition: all 0.4s;
+    margin-left: 60px;
+    margin-top: 0px;
 }
 
 .switch::after {
-  content: "";
-  position: absolute;
-  width: 22.5px;
-  height: 22.5px;
-  border-radius: 50%;
-  background-color: white;
-  top: 1px;
-  left: 1px;
-  transition: all 0.4s;
+    content: "";
+    position: absolute;
+    width: 22.5px;
+    height: 22.5px;
+    border-radius: 50%;
+    background-color: white;
+    top: 1px;
+    left: 1px;
+    transition: all 0.4s;
 }
 
-.checkbox:checked + .switch::after {
-  left: 25px;
+.checkbox:checked+.switch::after {
+    left: 25px;
 }
-.checkbox:checked + .switch {
-  background-color: #388e3c;
+
+.checkbox:checked+.switch {
+    background-color: #00ac54;
 }
+
 .checkbox {
-  display: none;
+    display: none;
 }

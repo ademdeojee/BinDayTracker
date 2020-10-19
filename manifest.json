@@ -1,17 +1,20 @@
 {
-  "name": "Bin Day Extension",
-  "version": "1.0",
-  "manifest_version": 2,
-  "description": "Shows The Next Bin To Be Collected. Made By Adem.",
-  "permissions": [ "storage", "alarms", "background"],
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
-  "browser_action": {
-    "default_title": "Bin Day",
-    "default_popup": "popup.html"
-  },
-  "icons": {"128": "logo.png" },
-  "options_page": "options.html"
+    "name": "Bin Day Extension",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Shows The Next Bin To Be Collected. Made By Adem.",
+    "permissions": ["storage", "alarms", "background"],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_title": "Bin Day",
+        "default_popup": "popup.html"
+    },
+    "icons": { "128": "logo.png" },
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": false
+    }
 }
