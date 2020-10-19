@@ -1,8 +1,8 @@
 {
-    "name": "Bin Day Extension",
+    "name": "Bin Day Reminder",
     "version": "1.0",
     "manifest_version": 2,
-    "description": "Shows The Next Bin To Be Collected. Made By Adem.",
+    "description": "Shows The Next Bin To Be Collected.",
     "permissions": ["storage", "alarms", "background"],
     "background": {
         "scripts": ["background.js"],
