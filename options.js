@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function restoreOptions() {
-    chrome.storage.sync.get('nextDay', function(items) {
+    chrome.storage.sync.get({'nextDay' : '1'}, function(items) {
         document.querySelector("#days").value = items.nextDay;
         chrome.alarms.clearAll();
         chrome.alarms.create('flip', { when: getNextDayOfWeek(items.nextDay).valueOf() });

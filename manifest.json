@@ -1,6 +1,6 @@
 {
     "name": "Bin Day Reminder",
-    "version": "1.0",
+    "version": "1.1",
     "manifest_version": 2,
     "description": "Shows The Next Bin To Be Collected.",
     "permissions": ["storage", "alarms", "background"],

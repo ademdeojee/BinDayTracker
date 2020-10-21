@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
             image.src = 'YellowBin.png';
         }
     });
-    chrome.storage.sync.get('nextDay', function(items) {
+    chrome.storage.sync.get({'nextDay' : '1'}, function(items) {
         var now = new Date();
         if (getNextDayOfWeek(items.nextDay).getDate() - 7 == now.getDate()) {
             document.querySelector("#date").innerHTML = "Today Is Bin Day (" + now.toLocaleString('en-au', { weekday: 'short', day: 'numeric', month: 'numeric' }) + ")";
