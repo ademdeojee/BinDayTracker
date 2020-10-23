@@ -3,11 +3,7 @@
     "version": "1.1",
     "manifest_version": 2,
     "description": "Shows The Next Bin To Be Collected.",
-    "permissions": ["storage", "alarms", "background"],
-    "background": {
-        "scripts": ["background.js"],
-        "persistent": false
-    },
+    "permissions": ["storage", "alarms"],
     "browser_action": {
         "default_title": "Bin Day",
         "default_popup": "popup.html"

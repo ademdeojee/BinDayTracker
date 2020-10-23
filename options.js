@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     var link = document.querySelector("#days");
     link.onchange = function() {
-        chrome.storage.sync.set({ 'nextDay': link.value });
+        chrome.storage.sync.set({ 'nextDay': getNextDayOfWeek(link.value) });
         restoreOptions();
     };
 });
@@ -15,10 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function restoreOptions() {
-    chrome.storage.sync.get({'nextDay' : '1'}, function(items) {
-        document.querySelector("#days").value = items.nextDay;
-        chrome.alarms.clearAll();
-        chrome.alarms.create('flip', { when: getNextDayOfWeek(items.nextDay).valueOf() });
+    chrome.storage.sync.get({'nextDay' : 'getNextDayOfWeek(1)'}, function(items) {
+        document.querySelector("#days").value = items.nextDay.getDay();
+        //chrome.storage.sync.set({'nextDay': getNextDayOfWeek(link.value)});
     });
     chrome.storage.sync.get('checkState', function(items) {
         var link = document.querySelector("#check");
