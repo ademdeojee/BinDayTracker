@@ -1,7 +1,4 @@
 # How To Use
-## Chrome Webstore Installation (currently old version which doesn't work, lastest version is pending approval)
-https://chrome.google.com/webstore/detail/bin-day-reminder/jbjheajefcfplpmjanmhefpejkapefhe?utm_source=chrome-ntp-icon
-## Download From GitHub
 ### 1. Download as zip
 Go 'Code' -> 'Download as Zip'. Download and extract to folder wherever you want.
 
